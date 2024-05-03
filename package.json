@@ -11,6 +11,7 @@
     "array-flatten": "^1.1.1",
     "balanced-match": "^1.0.2",
     "basic-auth": "^2.0.1",
+    "bcrypt": "^5.1.1",
     "binary-extensions": "^2.3.0",
     "body-parser": "^1.20.2",
     "brace-expansion": "^1.1.11",
@@ -58,6 +59,7 @@
     "is-extglob": "^2.1.1",
     "is-glob": "^4.0.3",
     "is-number": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
     "kareem": "^2.6.3",
     "lru-cache": "^6.0.0",
     "media-typer": "^0.3.0",
@@ -112,6 +114,7 @@
     "undefsafe": "^2.0.5",
     "unpipe": "^1.0.0",
     "utils-merge": "^1.0.1",
+    "validator": "^13.11.0",
     "vary": "^1.1.2",
     "webidl-conversions": "^7.0.0",
     "whatwg-url": "^13.0.0",
@@ -120,7 +123,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev" : "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
