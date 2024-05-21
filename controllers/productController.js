@@ -1,12 +1,12 @@
 import mongoose from "mongoose"
 import Product from "../models/productModel.js"
-
+  
 
 
 export const get = async (req , res)=>{
     const id = await req.params.id
     console.log(req.params.id)
-    const product = await Product.find({_id : id})
+    const product = await Product.find({_id : id}).populate("reviews")
     res.status(200).json({msg : product})
 }
 
@@ -33,7 +33,7 @@ export const create = async (req , res)=>{
 
 
 
-export const getAll = async (req , res)=>{
+export const getAll = async (req , res)=>{   
     const id = await req.params.id
     console.log(req.params.id)
     const product = await Product.find()

@@ -1,12 +1,12 @@
 import  { Router } from "express";
 import { get , create, getAll} from "../controllers/productController.js";
-import { protect } from "../middleware/protect.js";
+import { protect ,restrict} from "../middleware/protect.js";
 
 const ProductRoute = Router()
 
 ProductRoute
 .route('/')
-.get(protect ,  getAll)
+.get(protect , restrict("admin") ,   getAll)
 .post(create)
 
 
