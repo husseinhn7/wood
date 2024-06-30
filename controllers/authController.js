@@ -5,7 +5,7 @@ import nodeMailer from "nodemailer"
 import crypto from 'crypto'
 import { promisify } from "util";
 import fresh from "fresh";
-
+import { catchAsync } from "./errorController.js";
 
 
 const Token = (id) =>{
@@ -165,14 +165,17 @@ export const  updatePassword  = async (req, res) =>{
       "status" : "success",
     })
 
+  }
 
 
 
+  export const uploadPhoto = (req, res) =>{
+    console.log(req.file)
+    console.log(req.body)
+    res.json({
+      n  : "123"
+    })
 
 
 
-
-
-
-
-}
+  }

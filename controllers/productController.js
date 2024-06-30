@@ -22,11 +22,11 @@ const update = async (req , res)=>{
 
 export const create = async (req , res)=>{
     const data = await req.body
-    const newprod = await Product.insertMany(data)
+    const newProduct = await Product.insertMany(data)
     res.status(201).json({
         status : 'success',
         data : {
-            tour : newprod
+            tour : newProduct
         }
     })
 }

@@ -1,9 +1,9 @@
 import Order from "../models/orderModel.js"
 import Product from "../models/productModel.js"
+import { catchAsync } from "./errorController.js"
 
 
-
-export const getOrders = async (req, res) =>{
+export const getOrders =  async (req, res) =>{
     const orders = await Order.find().populate({ path : "product" })
     res
     .status(200)
